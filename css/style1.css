@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+
+.slide-container {
+  max-width: 1120px;
+  width: 100%;
+  padding: 40px 0;
+}
+
+.slide-content {
+  /* padding: 0 10px; */
+  margin: 0 40px;
+  /* background-color: pink; */
+  overflow: hidden;
+  border-radius: 25px;
+}
+
+.card {
+  border-radius: 25px;
+  background-color: #dae7db;
+}
+
+.image-content,
+.card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 10px;
+  /* justify-content: space-between; */
+  padding: 10px 14px;
+}
+
+.image-content {
+  position: relative;
+  row-gap: 5px;
+  padding: 25px 0;
+}
+
+.card-content {
+  height: 160px;
+}
+
+.overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background-color: var(--red-color);
+  border-radius: 25px 25px 0 25px;
+}
+
+.overlay::before,
+.overlay::after {
+  content: '';
+  position: absolute;
+  right: 0;
+  bottom: -40px;
+  height: 40px;
+  width: 40px;
+  background-color: var(--red-color);
+}
+
+.overlay::after {
+  border-radius: 0 25px 0 0;
+  background-color: #dae7db;
+}
+
+.card-image {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  background: #f0f0f0;
+  padding: 3px;
+}
+
+.card-image .card-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--red-color);
+}
+
+.soda-name {
+  font-size: 18px;
+  margin-bottom: 6px;
+  font-weight: 700;
+  color: #202020;
+}
+
+.description {
+  font-size: 14px;
+  font-weight: 600;
+  color: #3b3b3b;
+  text-align: center;
+}
+
+.button {
+  border: none;
+  font-size: 16px;
+  color: #3b3b3b;
+  font-weight: 600;
+  padding: 8px 16px;
+  background-color: var(--red-color);
+  border-radius: 6px;
+  margin: 14px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.button:hover {
+  background-color: var(--red-color);
+}
+
+.swiper-button-next {
+  right: 0;
+}
+
+.swiper-button-prev {
+  left: 0;
+}
+
+.swiper-nav-btn {
+  color: var(--red-color);
+  transition: all 0.2s ease;
+}
+
+.swiper-nav-btn:hover {
+  color: #fda05d;
+}
+
+.swiper-nav-btn::before,
+.swiper-nav-btn::after {
+  font-size: 40px;
+}
+
+.swiper-pagination-bullet {
+  background-color: var(--red-color);
+  opacity: 50%;
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #fda05d;
+  opacity: 1;
+}
+
+@media screen and (max-width: 768px) {
+  .slide-content {
+    margin: 0 10px;
+  }
+
+  .swiper-nav-btn {
+    display: none;
+  }
+}
