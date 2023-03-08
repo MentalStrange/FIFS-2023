@@ -1762,7 +1762,7 @@ display: block;
 }
 
 .left{
-	background: url("/images/Dr-6.jpeg") no-repeat center;
+	background: url("../images/Dr-6.jpeg") no-repeat center;
 	background-size: cover;
 	height: 100%;
     border-radius: 3%;
