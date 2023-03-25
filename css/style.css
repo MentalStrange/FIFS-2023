@@ -79,7 +79,7 @@ h6 {
     padding: 30px 0;
     height: 92px;
     position: fixed;
-    left: 0;
+    left: -50px;
     top: 0;
     right: 0;
     transition: all 0.5s;
@@ -279,6 +279,7 @@ h6 {
     .banner {
         padding: 120px 0 25px 0;
     }
+    
 }
 
 .banner::before {
@@ -1699,6 +1700,7 @@ display: block;
   .about img{
     margin-bottom: 20px;
   }
+ 
 }
 
 @media (min-width: 1200px) {
@@ -1718,7 +1720,11 @@ display: block;
 @media (max-width: 575.98px) {
     .about-us {
         font-size: 25px;
-        /* padding-bottom: 5px; */
+        padding-bottom: 5px;
+    }
+    .about-banner img{
+        width: 300px;
+        height: 400px;
     }
 }
 
@@ -1847,4 +1853,81 @@ textarea{
 
     }
 
+
 }
+.logos{
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+position: absolute;
+
+}
+.logos img{
+float: left !important;
+width: 30px;
+height: 30px;
+margin-bottom: 650px;
+width: 800px !important; 
+height: 600px!important;
+position: absolute;
+}
+.alx-logo{
+    padding-left: -20px !important;
+    
+}
+/* Default styles for the images */
+.img-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .right-img {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    z-index: 100;
+  }
+  
+  .left-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    z-index: 100;
+    position: relative;
+    top: 20%;
+  }
+  
+  /* Media queries for different screen sizes */
+  @media screen and (max-width: 768px) {
+    .img-container {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .right-img {
+      width: 150px;
+      height: 150px;
+      margin-top: 10px;
+    }
+  
+    .left-img {
+      width: 150px;
+      height: 150px;
+      top: 0;
+      margin-top: 10px;
+
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .right-img,
+    .left-img {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  
+
+

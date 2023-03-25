@@ -176,9 +176,9 @@ var swiper = new Swiper('.slide-content', {
   slidesPerView: 3,
   spaceBetween: 25,
   loop: true,
-  centerSlide: 'true',
-  fade: 'true',
-  grabCursor: 'true',
+  centerSlide: true,
+  fade: true,
+  grabCursor: true,
   pagination: {
     el: '.swiper-pagination',
     clickable: true,
@@ -188,7 +188,10 @@ var swiper = new Swiper('.slide-content', {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-
+  autoplay: {
+    delay: 2500, // Time between each auto slide (in milliseconds)
+    disableOnInteraction: false, // Enable user interaction (clicking) with slider during autoplay
+  },
   breakpoints: {
     0: {
       slidesPerView: 1,
@@ -201,5 +204,6 @@ var swiper = new Swiper('.slide-content', {
     },
   },
 });
+
 
 // end the promo code 
