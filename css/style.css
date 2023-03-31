@@ -1724,7 +1724,7 @@ display: block;
     }
     .about-banner img{
         width: 300px;
-        height: 400px;
+        height: 343px;
     }
 }
 
@@ -1883,14 +1883,15 @@ position: absolute;
   }
   
   .right-img {
-    width: 200px;
-    height: 200px;
+    width: 236px;
+    height: 186px;
     position: relative;
     z-index: 100;
+    margin-top: 15px;
   }
   
   .left-img {
-    width: 200px;
+    width: 180px;
     height: 200px;
     border-radius: 50%;
     z-index: 100;
@@ -1909,23 +1910,27 @@ position: absolute;
     .right-img {
       width: 150px;
       height: 150px;
-      margin-top: 10px;
+      margin-top: 15px;
     }
   
     .left-img {
       width: 150px;
       height: 150px;
       top: 0;
-      margin-top: 10px;
+      margin-top: 15px;
 
     }
   }
   
   @media screen and (max-width: 480px) {
-    .right-img,
+    .right-img{
+        width: 120px;
+        height: 1x  00px;
+        margin-top: 6px;
+    }
     .left-img {
       width: 100px;
-      height: 100px;
+      height: 120px;
     }
   }
   
