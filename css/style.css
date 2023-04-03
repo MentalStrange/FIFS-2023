@@ -1626,11 +1626,12 @@ display: block;
 }
 .Topics {
     color: var(--red-color);
+    
 
 }
 
 .about-content p{
-    font-size: 19px;
+    font-size: 22px;
     text-decoration: solid;
 }
 
@@ -1933,6 +1934,34 @@ position: absolute;
       height: 120px;
     }
   }
+
+  /* start this for button of google maps */
+  .button-container {
+    text-align: center;
+  }
+  
+  .my-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: rgb(87, 108, 188);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  .my-button:hover {
+    background-color:rgb(0, 0, 0);
+    color: white;
+  }
+  .button-container a :hover{
+    color: white; 
+  }
+  
+  /* end this for button of google maps */
+  
   
 
 
