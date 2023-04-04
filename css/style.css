@@ -1962,6 +1962,30 @@ position: absolute;
   
   /* end this for button of google maps */
   
+  /* start the pervious events button */
+  .button-container {
+    text-align: center;
+  }
+  .previousEvents_btn{
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--red-color);
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 10px;
+    width: 100%;
+  }
   
+  .previousEvents_btn:hover {
+    background-color:rgb(0, 0, 0);
+    color: white;
+  }
+  .button-container a :hover{
+    color: white; 
+  }
+
+  /* end the pervious events button */
 
 
