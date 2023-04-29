@@ -1087,7 +1087,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 #ticket .single-ticket:hover a {
-    color: var(--red-color);
+    color: white;
     background: #222222;
 }
 
