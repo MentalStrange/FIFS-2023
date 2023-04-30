@@ -179,7 +179,7 @@ function loadNow($) {
 			prevEl: '.swiper-button-prev',
 		},
 		autoplay: {
-			delay: 2500, // Time between each auto slide (in milliseconds)
+			delay: 500, // Time between each auto slide (in milliseconds)
 			disableOnInteraction: false, // Enable user interaction (clicking) with slider during autoplay
 		},
 		breakpoints: {
