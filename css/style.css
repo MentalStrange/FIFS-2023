@@ -2042,3 +2042,26 @@ margin: 0 0 10px;
 }
 }
 
+/* it's for the tittle of the conference */
+
+#conference {
+padding: 40px 0;
+text-align: center;
+}
+
+.conference-title {
+font-size: 28px;
+font-weight: bold;
+margin-bottom: 20px;
+line-height: 1.3;
+}
+
+.conference-subtitle {
+font-size: 18px;
+font-weight: normal;
+}
+
+.container {
+max-width: 800px;
+margin: 0 auto;
+}
