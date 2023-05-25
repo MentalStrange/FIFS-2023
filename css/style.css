@@ -1863,12 +1863,22 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .left-img {
+	width: 150px;
+	height: 150px;
+	border-radius: 10%;
+	z-index: 100;
+	position: relative;
+	top: 20%;
+	margin-left: 5px;
+}
+.middle-img {
 	width: 180px;
 	height: 200px;
 	border-radius: 50%;
 	z-index: 100;
 	position: relative;
 	top: 20%;
+	margin-top: 40px;
 }
 
 /* Media queries for different screen sizes */
@@ -1886,12 +1896,19 @@ body.mobile-nav-active #mobile-nav-toggle {
 	}
 
 	.left-img {
-		width: 150px;
-		height: 150px;
+		width: 20px;
+		height: 20px;
 		top: 0;
 		margin-top: 15px;
-
 	}
+		.middle-img {
+			width: 100px;
+			height: 100px;
+			top: 0;
+			margin-top: 15px;
+			margin-top: 80px;
+	
+		}
 }
 
 @media screen and (max-width: 480px) {
@@ -2059,4 +2076,29 @@ line-height: 1.3;
 .conference-subtitle {
 font-size: 18px;
 font-weight: normal;
+}
+
+
+/* test */
+
+.container-deadline {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.section-content {
+  text-align: center;
+}
+
+.deadline-text,
+.details-text {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.fees-list {
+  font-size: 18px;
+  line-height: 1.6;
+  padding-left: 20px;
+  list-style-type: none;
 }
