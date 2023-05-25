@@ -186,10 +186,16 @@ h6 {
 #intro h2 {
 	color: #fff;
 	margin-bottom: 30px;
-	font-size: 64px;
+	font-size: 30px;
 	font-weight: 800;
 	letter-spacing: 1px;
 }
+@media (max-width: 767.98px) {
+	#intro h2 {
+		font-size: 5px;
+		margin-left: 10px;
+	}
+	}
 
 #intro p {
 	width: 80%;
@@ -1033,65 +1039,112 @@ body.mobile-nav-active #mobile-nav-toggle {
 /* ------------------ Tickets Style ---------------- */
 /* ================================================= */
 
-#ticket {
-	position: relative;
-	padding: 80px 0 90px 0;
-	text-align: center;
-}
+/* Ticket Section Start */
 
-#ticket .single-ticket {
-	position: relative;
-	text-align: center;
-	background-color: #fff;
-}
-
-@media (max-width: 767.98px) {
-	#ticket .single-ticket {
-		margin-bottom: 35px;
+.table {
+	width: 100%;
+	border-collapse: separate;
+	border-spacing: 0;
+	margin-bottom: 20px;
 	}
-}
-
-#ticket h2 {
-	display: block;
-	font-size: 45px;
-	line-height: 100px;
-	margin: 0 auto 20px;
+	
+	.table th,
+	.table td {
+	padding: 8px;
 	text-align: center;
-	box-shadow: 0 0 0 0px #fff inset, 0 0 5px 0 rgba(000, 000, 000, 0.5);
-	color: var(--red-color);
-	-webkit-transition: all 0.3s ease 0s;
-	-moz-transition: all 0.3s ease 0s;
-	-o-transition: all 0.3s ease 0s;
-	transition: all 0.3s ease 0s;
-}
-
-#ticket .single-ticket:hover h2 {
-	box-shadow: 0 0 0 10px #fff inset, 0 0 5px 0 rgba(000, 000, 000, 0.5);
+	border-bottom: 1px solid #ccc;
+	font-size: 14px;
+	}
+	
+	.table th {
+	background-color: #f2f2f2;
+	}
+	
+	.table td:first-child {
+	text-align: left;
+	}
+	
+	.table td:last-child {
+	border-right: none;
+	}
+	
+	.table tr:last-child td {
+	border-bottom: none;
+	}
+	
+	.table td.text-center {
+	text-align: center;
+	}
+	
+	.table td.text-center a {
+	display: inline-block;
+	padding: 6px 12px;
 	background-color: var(--red-color);
 	color: #fff;
-}
-
-#ticket .single-ticket h4 {
-	font-size: 22px;
-	font-weight: 700;
-	line-height: 24px;
-	letter-spacing: 1px;
-	text-transform: uppercase;
-	color: #666;
-	margin-bottom: 15px;
-}
-
-#ticket .single-ticket a {
+	text-decoration: none;
+	border-radius: 4px;
+	transition: background-color 0.3s ease;
+	}
+	
+	.table td.text-center a:hover {
+	background-color: var(--red-color);
+	}
+	
+	.section-header {
+	text-align: center;
+	margin-bottom: 40px;
+	}
+	.section-header h3 {
+	font-size: 24px;
+	font-weight: bold;
+	margin-bottom: 10px;
+	}
+	
+	.single-ticket a {
 	display: inline-block;
-	padding: 8px 30px;
-	color: #ffffff;
-	background: var(--red-color);
-}
-
-#ticket .single-ticket:hover a {
-	color: white;
-	background: #222222;
-}
+	padding: 6px 12px;
+	background-color:var(--red-color);
+	color: #fff;
+	text-decoration: none;
+	border-radius: 4px;
+	transition: background-color 0.3s ease;
+	width: 100px;
+	}
+	
+	.single-ticket a:hover {
+	background-color: var(--blue-color);
+	}
+	
+	/* Responsive styles */
+	@media screen and (max-width: 767px) {
+	.table thead {
+		display: table-header-group;
+	}
+	
+	.table td {
+		display: table-cell;
+		text-align: center;
+		width: auto;
+		box-sizing: border-box;
+		padding: 6px;
+	}
+	
+	.single-ticket a {
+		display: block;
+		margin-top: 5px;
+		margin-bottom: 5px;
+		text-align: center;
+		height: 30px;
+	}
+	
+	.section-header h3 {
+		font-size: 20px;
+		margin-bottom: 20px;
+	}
+	}
+	
+	
+	
 
 /* ================================================= */
 /* ------------------- Cart Style ------------------ */
@@ -1872,7 +1925,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .my-button:hover {
-	background-color: rgb(0, 0, 0);
+	background-color: var(--blue-color);
 	color: white;
 }
 
@@ -1900,7 +1953,7 @@ body.mobile-nav-active #mobile-nav-toggle {
 }
 
 .previousEvents_btn:hover {
-	background-color: rgb(0, 0, 0);
+	background-color: var(--blue-color);
 	color: white;
 }
 
@@ -1988,3 +2041,4 @@ margin: 0 0 10px;
 	height: 250px;
 }
 }
+

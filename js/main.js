@@ -163,36 +163,37 @@ function loadNow($) {
 	'use strict';
 
 	var swiper = new Swiper('.slide-content', {
-		slidesPerView: 3,
-		spaceBetween: 25,
-		loop: true,
-		centerSlide: true,
-		fade: true,
-		grabCursor: true,
+	  slidesPerView: 1,                    // Number of slides to show at once
+	  spaceBetween: 25,                    // Space between slides (in pixels)
+	  loop: false,                          // Enable continuous loop of slides
+	  centerSlide: false,                   // Center the active slide
+	  fade: false,                          // Enable fade transition effect
+	  grabCursor: false,                    // Show grab cursor on slide hover
 		pagination: {
-			el: '.swiper-pagination',
-			clickable: true,
-			dynamicBullets: true,
+			el: '.swiper-pagination',          // Pagination element selector
+			clickable: true,                   // Allow clicking on pagination bullets
+			dynamicBullets: false,              // Dynamically show/hide pagination bullets
 		},
 		navigation: {
-			nextEl: '.swiper-button-next',
-			prevEl: '.swiper-button-prev',
+			nextEl: '.swiper-button-next',     // Next slide button selector
+			prevEl: '.swiper-button-prev',     // Previous slide button selector
 		},
 		autoplay: {
-			delay: 500, // Time between each auto slide (in milliseconds)
-			disableOnInteraction: false, // Enable user interaction (clicking) with slider during autoplay
+			delay: 1500,                       // Time between each auto slide (in milliseconds)
+			disableOnInteraction: false,       // Enable user interaction (clicking) with slider during autoplay
 		},
 		breakpoints: {
 			0: {
-				slidesPerView: 1,
+			slidesPerView: 1,                // Number of slides to show at screen width 0px and above
 			},
 			520: {
-				slidesPerView: 2,
+			slidesPerView: 2,                // Number of slides to show at screen width 520px and above
 			},
 			950: {
-				slidesPerView: 3,
+			slidesPerView: 3,                // Number of slides to show at screen width 950px and above
 			},
 		},
 	});
+	
 
 }
