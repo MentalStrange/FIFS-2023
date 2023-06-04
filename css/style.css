@@ -258,7 +258,7 @@ h6 {
   }
   
   #intro .btn-get-started:hover {
-	background: var(--red-color);
+	background: var(--blue-color);
 	color: white;
   }
   
