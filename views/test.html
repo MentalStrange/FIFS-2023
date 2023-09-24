@@ -1,0 +1,73 @@
+<div id="speakers-container" class="container"></div>
+
+<style>
+  /* Add this CSS to control image visibility on different screen sizes */
+  @media (min-width: 768px) {
+    .img-cols {
+      display: block !important;
+    }
+  }
+</style>
+
+<script>
+  // Define an array of speaker data
+  const speakers = [
+    {
+      name: "Prof. Bernard Faye",
+      affiliation: "Emeritus scientist at CIRAD- SELMET, France",
+      image: "/images/speakersImg/dr01.jpg",
+    },
+    {
+      name: "Prof. Padalino Barbara",
+      affiliation:
+        "Department of Agriculture and Food Science, University of Bologna, Italy",
+      image: "/images/speakersImg/dr02.jpg",
+      presentation: "Welfare Assessment in Dromedary Camels",
+    },
+    {
+      name: "Prof. Dr. Khalid Ahmed El Bahrawy",
+      affiliation:
+        "Animal and Poultry Production Division, Desert Research Center, Egypt",
+      image: "/images/speakersImg/dr03.jpg",
+      presentation:
+        "A comprehensive and sustainable investment model to preserve the cultural heritage of camel breeders in support of global food security.",
+    },
+    {
+      name: "Prof. Ahmed Askar",
+      affiliation: "Desert Research Center, Egypt",
+      image: "/images/speakersImg/dr04.jpg",
+      presentation:
+        "A Novel International Approach to Enhance the Efficiency of Camel Production Systems Worldwide",
+    },
+    // Add more speaker data objects as needed
+  ];
+
+  // Function to generate speaker HTML
+  function generateSpeakerHTML(speaker) {
+    return `
+      <div class="row">
+        <div class="col-md-6 img-cols">
+          <div class="img-col">
+            <img class="img-fluid" src="${speaker.image}" />
+          </div>
+        </div>
+        <div class="col-md-6 content-cols">
+          <div class="content-col">
+            <h3>${speaker.name}</h3>
+            <h4>${speaker.affiliation}</h4>
+            ${speaker.presentation ? `<p>${speaker.presentation}</p>` : ""}
+          </div>
+        </div>
+      </div>
+    `;
+  }
+
+  // Get the speakers container
+  const speakersContainer = document.getElementById("speakers-container");
+
+  // Generate HTML for each speaker and append to the container
+  speakers.forEach((speaker) => {
+    const speakerHTML = generateSpeakerHTML(speaker);
+    speakersContainer.innerHTML += speakerHTML;
+  });
+</script>

@@ -1,159 +1,273 @@
+<style>
+  /* Add this CSS to control image and content position based on odd/even speaker */
+  .img-cols {
+    display: flex;
+    justify-content: center;
+  }
+  .content-cols {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  @media (min-width: 768px) {
+    .row:nth-child(odd) .img-cols {
+      order: 2;
+    }
+    .row:nth-child(odd) .content-cols {
+      order: 1;
+    }
+    .row:nth-child(even) .img-cols {
+      order: 1;
+    }
+    .row:nth-child(even) .content-cols {
+      order: 2;
+    }
+  }
+</style>
 <!-- Banner Section Start-->
 <section class="banner">
-	<div class="container">
-		<div class="row">
-			<div class="col-md-12">
-				<div class="row">
-					<div class="col-md-6">
-						<h1 class="banner-header">
-							Speakers
-						</h1>
-					</div>
-					<div class="col-md-6">
-						<p class="banner-nav">
-							<span class="banner-box">
-								<a href="javascript:void(0);" onclick="changePage('home');">Home</a>
-								<a href="javascript:void(0);" onclick="changePage('speaker');">Speakers</a>
-							</span>
-						</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="row">
+          <div class="col-md-6">
+            <h1 class="banner-header">Speakers</h1>
+          </div>
+          <div class="col-md-6">
+            <p class="banner-nav">
+              <span class="banner-box">
+                <a href="javascript:void(0);" onclick="changePage('home');"
+                  >Home</a
+                >
+                <a href="javascript:void(0);" onclick="changePage('speaker');"
+                  >Speakers</a
+                >
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 <!-- Banner Section end -->
-
 <!-- Speaker Section Start -->
+<section id="speaker">
+  <div class="container">
+    <header class="section-header">
+      <h3>Speakers</h3>
+    </header>
+    <div id="speakers-container" class="container"></div>
+    <script>
+      // Define an array of speaker data
+      const speakers = [
+        {
+          name: "Prof. Bernard Faye",
+          affiliation: "Emeritus scientist at CIRAD- SELMET, France",
+          image: "/images/speakersImg/dr01.jpg",
+        },
+        {
+          name: "Prof. Padalino Barbara",
+          affiliation:
+            "Department of Agriculture and Food Science, University of Bologna, Italy",
+          image: "/images/speakersImg/dr02.jpg",
+          presentation: "Welfare Assessment in Dromedary Camels",
+        },
+        {
+          name: "Prof. Dr. Khalid Ahmed El Bahrawy",
+          affiliation:
+            "Animal and Poultry Production Division, Desert Research Center, Egypt",
+          image: "/images/speakersImg/dr03.jpg",
+          presentation:
+            "A comprehensive and sustainable investment model to preserve the cultural heritage of camel breeders in support of global food security.",
+        },
+        {
+          name: "Prof. Ahmed Askar",
+          affiliation: "Desert Research Center, Egypt",
+          image: "/images/speakersImg/dr04.jpg",
+          presentation:
+            "A Novel International Approach to Enhance the Efficiency of Camel Production Systems Worldwide",
+        },
+        {
+          name: "Prof. Hussein Mansour",
+          affiliation: "Former Chairman of the Food Safety Authority, Egypt ",
+          image: "/images/speakersImg/dr05.jpg",
+          presentation:
+            "AAnimal Production in Crisis: A Call for Strategic Reform",
+        },
+        {
+          name: "Prof. Mohsen Shoukry",
+          affiliation: "National Research Center, Egypt",
+          image: "/images/speakersImg/dr06.jpg",
+          presentation:
+            "Analytical study of the livestock statistics in Egypt, reality and future",
+        },
+        {
+          name: "Prof. Hassan Elshear ",
+          affiliation: "Desert Research Center, Egypt",
+          image: "/images/speakersImg/dr07.jpg",
+          presentation:
+            "Food for the future through integrated saline agriculture-livestock production systems in arid regions of Egypt",
+        },
+        {
+          name: "Prof. Salah MesalhyAly",
+          affiliation:
+            "Chairman of Lakes and Fish Resources Protection and Development Agency, Faculty of Veterinary medicine, Suez Canal University, Egypt",
+          image: "/images/speakersImg/dr08.jpg",
+          presentation:
+            "The Current and Future Vision of Fisheries in Egypt According to Local, Regional, and International Challenges",
+        },
+        {
+          name: "Prof. Mohamed El-Shafeay",
+          affiliation: "Chief Manager of Ismailia/Misr company for poultry",
+          image: "/images/speakersImg/dr09.jpg",
+          presentation: "Poultry Industry in Egypt",
+        },
+        {
+          name: "Prof. Sobhy M.A. Sallam",
+          affiliation: "Faculty of Agriculture, Alexandria University, Egypt",
+          image: "/images/speakersImg/dr10.jpg",
+          presentation: "ANutrigenomics and Nutrigenetics in Farm Animals",
+        },
+        {
+          name: "Prof. Bahgat Moustafa Edrise",
+          affiliation:
+            "Faculty of Veterinary Medicine, Cairo University, Egypt",
+          image: "/images/speakersImg/dr11.jpg",
+          presentation:
+            "Climate Change and Livestock Sustainability: The Witnessed Unveiling of Customising the Tackling Clinico- Nutritional Approach(s) Towards Quality/Precise Smart Farming / Welfare & Productivity Obsessional Goals",
+        },
+        {
+          name: "Dr. Ahmed Kholif",
+          affiliation: "National Research Center, Egypt",
+          image: "/images/speakersImg/dr12.jpg",
+          presentation:
+            "Animal nutrition strategies and options to reduce the use of antimicrobials in the dairy industry",
+        },
 
+        {
+          name: "Dr. Mohamed Bakr ",
+          affiliation: "Faculty of Agriculture, Cairo University, Egypt",
+          image: "/images/speakersImg/dr133.jpg",
+          presentation:
+            "The profitability of animal production farms in light of the current global challenges",
+        },
+        {
+          name: "Prof. Mostafa S. A. Khattab",
+          affiliation: "National Research Center, Egypt",
+          image: "/images/speakersImg/dr13.jpg",
+          presentation:
+            "Rumen-Based Probiotics in Ruminant Nutrition: A Light at the End of the Tunnel",
+        },
+        {
+          name: "Prof. Gaukhar Konuspayeva",
+          affiliation:
+            "Faculty of Biology and Biotechnology, Al-Farabi Kazakh National University, Kazakhstan",
+          image: "/images/speakersImg/dr14.jpg",
+          presentation:
+            "Camel Milk Processing: An Important Step for Food Security and Safety in Arid Countries",
+        },
+        {
+          name: "Prof. Nesrein M. Hashem",
+          affiliation: "Faculty of Agriculture, Alexandria University, Egypt",
+          image: "/images/speakersImg/dr15.jpg",
+          presentation:
+            "New Insights in Nanotechnology for Integrated Management of Livestock Productivity and Health",
+        },
+        {
+          name: "Prof. Tarek Abdelfattah Morsy",
+          affiliation: "National Research Center, Egypt	",
+          image: "/images/speakersImg/dr16.jpg",
+          presentation:
+            "Exploring the Applications of Nanotechnology in Animal Production",
+        },
+        {
+          name: "Dr. Mohamad Elsayed abdelmagid Elmasry",
+          affiliation: "Agriculture Research Center, Egypt ",
+          image: "/images/speakersImg/dr17.jpg",
+          presentation:
+            "Application of Microbiology and Biotechnology for Effective Probiotics in Animal and Poultry Feed",
+        },
+        {
+          name: "Prof. Mahmoud Tanekhy",
+          affiliation:
+            "Faculty of Veterinary Medicine, Alexandria University, Egypt",
+          image: "/images/speakersImg/dr18.jpg",
+          presentation: "Nanotechnology and Aquaculture",
+        },
+        {
+          name: "Dr. Mohamed Mahmoud Mabrouk Hassabo",
+          affiliation: "Faculty of Agriculture, Al-Azhar University, Egypt",
+          image: "/images/speakersImg/dr19.jpg",
+          presentation: "The Effect of Nanotechnology on Fish Nutrition",
+        },
+        {
+          name: "Prof. Amira M. Galal Darwish",
+          affiliation:
+            "Borg Al Arab Technology University, City of scientific research and technological applications, Egypt",
+          image: "/images/speakersImg/dr20.jpg",
+          presentation:
+            "Microbiome- Based Solutions for Food Security, Nutrition, and Health",
+        },
+        {
+          name: "Prof. Yosra A. Soltan",
+          affiliation: "Faculty of Agriculture, Alexandria University, Egypt",
+          image: "/images/speakersImg/dr21.jpg",
+          presentation:
+            "Nano Feed Additives for Mitigating Greenhouse Gas Emissions from Ruminants",
+        },
+        {
+          name: "Prof. Manal Ramadan",
+          affiliation: "National Research Center, Egypt",
+          image: "/images/speakersImg/dr22.jpg",
+          presentation:
+            "Micro-Encapsulation, their Applications in Food and Drugs",
+        },
+        {
+          name: "Dr. Ahmed Abdelfattah Ibrahim Elolimy",
+          affiliation: "National Research Center, Egypt",
+          image: "/images/speakersImg/dr23.jpg",
+          presentation:
+            "An Emerging Role for Untargeted Metabolomics in Animal Nutrition",
+        },
+        {
+          name: "Dr. Amr Elnile",
+          affiliation:
+            "City of scientific research and technological applications, Egypt",
+          image: "/images/speakersImg/dr24.jpg",
+          presentation:
+            "Nano Clay Minerals as A feed Additive for Sustainable Animal Production",
+        },
+      ];
+      // Function to generate speaker HTML
+      function generateSpeakerHTML(speaker, index) {
+        return `
+      <div class="row">
+        <div class="col-md-6 img-cols">
+          <div class="img-col">
+            <img class="img-fluid" src="${speaker.image}" />
+          </div>
+        </div>
+        <div class="col-md-6 content-cols">
+          <div class="content-col">
+            <h3>${speaker.name}</h3>
+            <h4>${speaker.affiliation}</h4>
+            ${speaker.presentation ? `<p>${speaker.presentation}</p>` : ""}
+          </div>
+        </div>
+      </div>
+    `;
+      }
+      // Get the speakers container
+      const speakersContainer = document.getElementById("speakers-container");
 
-<!-- <section id="speaker">
-	<div class="container">
-		<header class="section-header">
-			<h3>Speakers</h3>
-		</header>
-		<div class="row">
-			<div class="col-md-6 img-cols">
-				<div class="img-col">
-					<img class="img-fluid" src="img/speaker-1.jpg">
-				</div>
-			</div>
-			<div class="col-md-6 content-cols content-cols-right">
-				<div class="content-col">
-					<h3>Robyn Brown</h3>
-					<h4>Product Designer</h4>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam velit orci, tincidunt sit amet
-						arcu eu, iaculis malesuada lectus. Sed non lectus at libero vulputate commodo egestas eu nulla.
-					</p>
-					<div class="social-links">
-						<a href="https://www.freewebsitecode.com/" class="twitter"><i class="fa fa-twitter"></i></a>
-						<a href="https://www.facebook.com/freewebsitecode/" class="facebook"><i
-								class="fa fa-facebook"></i></a>
-						<a href="https://www.freewebsitecode.com/" class="instagram"><i class="fa fa-instagram"></i></a>
-						<a href="https://www.youtube.com/channel/UC9HlQRmKgG3jeVD_fBxj1Pw/videos" class="google-plus"><i
-								class="fa fa-youtube"></i></a>
-						<a href="https://www.freewebsitecode.com/" class="linkedin"><i class="fa fa-linkedin"></i></a>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-md-6 img-cols d-block d-md-none">
-				<div class="img-col">
-					<img class="img-fluid" src="img/speaker-2.jpg">
-				</div>
-			</div>
-			<div class="col-md-6 content-cols  content-cols-left">
-				<div class="content-col">
-					<h3>Simon Powell</h3>
-					<h4>Cloud Architect</h4>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam velit orci, tincidunt sit amet
-						arcu eu, iaculis malesuada lectus. Sed non lectus at libero vulputate commodo egestas eu nulla.
-					</p>
-					<div class="social-links">
-						<a href="https://www.freewebsitecode.com/" class="twitter"><i class="fa fa-twitter"></i></a>
-						<a href="https://www.facebook.com/freewebsitecode/" class="facebook"><i
-								class="fa fa-facebook"></i></a>
-						<a href="https://www.freewebsitecode.com/" class="instagram"><i class="fa fa-instagram"></i></a>
-						<a href="https://www.youtube.com/channel/UC9HlQRmKgG3jeVD_fBxj1Pw/videos" class="google-plus"><i
-								class="fa fa-youtube"></i></a>
-						<a href="https://www.freewebsitecode.com/" class="linkedin"><i class="fa fa-linkedin"></i></a>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-6 img-cols d-none d-md-block">
-				<div class="img-col">
-					<img class="img-fluid" src="img/speaker-2.jpg">
-				</div>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-md-6 img-cols">
-				<div class="img-col">
-					<img class="img-fluid" src="img/speaker-3.jpg">
-				</div>
-			</div>
-			<div class="col-md-6 content-cols content-cols-right">
-				<div class="content-col">
-					<h3>Britney Swanson</h3>
-					<h4>Data Analyst</h4>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam velit orci, tincidunt sit amet
-						arcu eu, iaculis malesuada lectus. Sed non lectus at libero vulputate commodo egestas eu nulla.
-					</p>
-					<div class="social-links">
-						<a href="https://www.freewebsitecode.com/" class="twitter"><i class="fa fa-twitter"></i></a>
-						<a href="https://www.facebook.com/freewebsitecode/" class="facebook"><i
-								class="fa fa-facebook"></i></a>
-						<a href="https://www.freewebsitecode.com/" class="instagram"><i class="fa fa-instagram"></i></a>
-						<a href="https://www.youtube.com/channel/UC9HlQRmKgG3jeVD_fBxj1Pw/videos" class="google-plus"><i
-								class="fa fa-youtube"></i></a>
-						<a href="https://www.freewebsitecode.com/" class="linkedin"><i class="fa fa-linkedin"></i></a>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<div class="row">
-			<div class="col-md-6 img-cols d-block d-md-none">
-				<div class="img-col">
-					<img class="img-fluid" src="img/speaker-4.jpg">
-				</div>
-			</div>
-			<div class="col-md-6 content-cols  content-cols-left">
-				<div class="content-col">
-					<h3>Matthew Lyons</h3>
-					<h4>HR Specialist</h4>
-					<p>
-						Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam velit orci, tincidunt sit amet
-						arcu eu, iaculis malesuada lectus. Sed non lectus at libero vulputate commodo egestas eu nulla.
-					</p>
-					<div class="social-links">
-						<a href="https://www.freewebsitecode.com/" class="twitter"><i class="fa fa-twitter"></i></a>
-						<a href="https://www.facebook.com/freewebsitecode/" class="facebook"><i
-								class="fa fa-facebook"></i></a>
-						<a href="https://www.freewebsitecode.com/" class="instagram"><i class="fa fa-instagram"></i></a>
-						<a href="https://www.youtube.com/channel/UC9HlQRmKgG3jeVD_fBxj1Pw/videos" class="google-plus"><i
-								class="fa fa-youtube"></i></a>
-						<a href="https://www.freewebsitecode.com/" class="linkedin"><i class="fa fa-linkedin"></i></a>
-					</div>
-				</div>
-			</div>
-			<div class="col-md-6 img-cols d-none d-md-block">
-				<div class="img-col">
-					<img class="img-fluid" src="img/speaker-4.jpg">
-				</div>
-			</div>
-		</div>
-	</div>
-</section> -->
-
-
-<p style="text-align: center; font-size: 40px;margin: 50px ;">Will be Announced <span style="color: red;">Soon</span></p>
-
-
+      // Generate HTML for each speaker and append to the container
+      speakers.forEach((speaker, index) => {
+        const speakerHTML = generateSpeakerHTML(speaker, index);
+        speakersContainer.innerHTML += speakerHTML;
+      });
+    </script>
+    <!-- Repeat this sequence 20 more times with different image numbers -->
+  </div>
+</section>
 <!-- Speaker Section End -->
