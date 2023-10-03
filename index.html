@@ -93,19 +93,21 @@
   <script src="js/main.js"></script>
 
   <script>
-    let currentPage = location.search.substring(1);
+    let currentPage = getParameterByName("page");
+
     if (!currentPage || currentPage === "undefined") {
       currentPage = "home";
     }
+
     $.get(`/views/header.html`, (headerContent) => {
       $.get(`/views/footer.html`, (footerContent) => {
         $.get(`/views/${currentPage}.html`, (content) => {
           $("body").html(`
-				${headerContent}
-				${content}
-				${footerContent}
-				<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
-			`);
+        ${headerContent}
+        ${content}
+        ${footerContent}
+        <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+      `);
 
           let currentDiv = $(`#nav-${currentPage}`);
           if (currentDiv) currentDiv.addClass("menu-active");
@@ -114,10 +116,15 @@
         });
       });
     });
+
+    function getParameterByName(name) {
+      const urlParams = new URLSearchParams(window.location.search);
+      return urlParams.get(name);
+    }
+
     function changePage(page) {
       if (page == currentPage) return;
-      window.location.href =
-        location.protocol + "//" + location.host + "?" + page;
+      window.location.href = `${location.protocol}//${location.host}/?page=${page}`;
     }
   </script>
 </html>
