@@ -128,7 +128,7 @@
           name: "Prof. Sobhy M.A. Sallam",
           affiliation: "Faculty of Agriculture, Alexandria University, Egypt",
           image: "/images/speakersImg/dr10.jpg",
-          presentation: "ANutrigenomics and Nutrigenetics in Farm Animals",
+          presentation: "Nutrigenomics and Nutrigenetics in Farm Animals",
         },
         {
           name: "Prof. Bahgat Moustafa Edrise",
@@ -239,25 +239,143 @@
           presentation:
             "Nano Clay Minerals as A feed Additive for Sustainable Animal Production",
         },
+        {
+          name: "Prof. Antonio Gonzalez",
+          affiliation:
+            "Departamento de Producción y Sanidad Animal, Facultad de Veterinaria, Universidad Cardenal Herrera-CEU, Valencia, Spain.",
+          image: "/images/speakersImg/dr25.jpg",
+          presentation:
+            "Traceability of Animal Production for Enhancing Biosecurity, Efficiency and Quality",
+        },
+        {
+          name: "Prof. Omer Ucar",
+          affiliation: "Tuba Bulbul and Mustafa Saatci, Turky",
+          image: "/images/speakersImg/dr26.jpg",
+          presentation:
+            "Potential Threat of Climate Change and Global Warming for Livestock Breeding",
+        },
+        {
+          name: "Prof. Sun Peng",
+          affiliation:
+            " Institute of Animal Science, Chinese Academy of Agricultural Sciences, China",
+          image: "/images/speakersImg/dr27.jpg",
+          presentation:
+            "Plasma Metabolic Profiling Reveals that Chromium Yeast Alleviates The negative Effects of Heat Stress in Mid-Lactation Dairy Cows",
+        },
+        {
+          name: "Prof. Hari Prasad Devkota",
+          affiliation:
+            " Graduate School of Pharmaceutical Sciences, Kumamoto University, Kumamoto, Japan",
+          image: "/images/speakersImg/dr28.jpg",
+          presentation:
+            "Exploring Bioactive Compounds and Nanotechnology: A Multidisciplinary Approach to Enhancing Human and Animal Health",
+        },
+        {
+          name: "Prof. Juan Manuel Guillen Muñoz",
+          affiliation:
+            " Universidad Autónoma Agraria, Antonio Narro, Torreón, Coahuila, Mexico ",
+          image: "/images/speakersImg/dr29.jpg",
+          presentation:
+            "Hormonal Treatments in Small Ruminants: Challenges and Perspectives.",
+        },
+        {
+          name: "Prof. El-Sayed Hafez",
+          affiliation:
+            " Scientific Research City and Application Technology, Egypt",
+          image: "/images/speakersImg/dr30.jpg",
+          presentation:
+            "Transcriptome is An Intermediate Language Between Genome and Proteome",
+        },
+        {
+          name: "Dr. Chirag Chopra",
+          affiliation:
+            " School of Bioengineering and Biosciences, Lovely Professional University, India",
+          image: "/images/speakersImg/dr31.jpg",
+          presentation:
+            "Immune Checkpoint Targeting Drugs with A Promise of Repurposing",
+        },
+        {
+          name: "Dr. Reena Singh",
+          affiliation:
+            "School of Bioengineering and Biosciences, Lovely Professional University, India",
+          image: "/images/speakersImg/dr32.jpg",
+          presentation:
+            "Myxobacteria in Wetlands: An Astonishing Source of Enzymes and Metabolites",
+        },
+        {
+          name: "Prof. Gamal Ashour",
+          affiliation: " Faculty of Agriculture, Cairo University, Egypt",
+          image: "/images/speakersImg/dr33.jpg",
+          presentation: "Immune Responses of Bovines to Heat Stress Conditions",
+        },
+        {
+          name: "Prof. Nasser Ghanem",
+          affiliation: " Faculty of Agriculture, Cairo University, Egypt",
+          image: "/images/speakersImg/dr34.jpg",
+          presentation:
+            "System Biology Approach to Identify Genome Landscape of Indigenous Cattle Breeds Under Different Ecosystems",
+        },
+        {
+          name: "Prof. Safa Salah Sanad",
+          affiliation:
+            " Animal Production Research Institute, Agricultural Research Center, Egypt",
+          image: "/images/speakersImg/dr35.jpg",
+          presentation:
+            "The Development of Local Cows in Egypt, Sustainability, and Conservation",
+        },
+        {
+          name: "Dr. Ahmed Abd Elkader Saleh",
+          affiliation: "Faculty of Agriculture, Alexandria University, Egypt",
+          image: "/images/speakersImg/dr36.jpg",
+          presentation: "Genomic Selection",
+        },
+        {
+          name: "Prof. Abdelaziz M. Nour",
+          affiliation: " Faculty of Agriculture, Alexandria University, Egypt",
+          image: "/images/speakersImg/dr37.jpg",
+          presentation: "Super-Intensive Shrimp Farming (SISF)",
+        },
+        {
+          name: "Prof. Mohamed F Osman",
+          affiliation: " Faculty of Agriculture, Ain Shams University, Egypt",
+          image: "/images/speakersImg/dr38.jpg",
+          presentation:
+            "Use of Recent (IPRS) Technology in Aquaculture: Challenges and Opportunities",
+        },
+        {
+          name: "Prof. Ashraf El-Dakar",
+          affiliation: " Faculty of Agriculture, Suez Canal University, Egypt",
+          image: "/images/speakersImg/dr39.jpg",
+          presentation:
+            "The Future of Fish Production in Egypt According to the technological Development of Aquaculture Systems",
+        },
+        {
+          name: "Prof. Ashraf Abdel Samea",
+          affiliation:
+            " National Institute of Oceanography and Fisheries (NIOF), Egypt",
+          image: "/images/speakersImg/dr40.jpg",
+          presentation:
+            "Efficacy of Coded Wire-Tagging as A tool to Enhance the stock of Grey Mullet (Mugil cephalus) in Egyptian Enclosed Water Bodies",
+        },
       ];
       // Function to generate speaker HTML
       function generateSpeakerHTML(speaker, index) {
         return `
-      <div class="row">
-        <div class="col-md-6 img-cols">
-          <div class="img-col">
-            <img class="img-fluid" src="${speaker.image}" />
+        <div class="row">
+          <div class="col-md-6 img-cols">
+            <div class="img-col">
+              <img class="img-fluid" src="${speaker.image}" />
+            </div>
+          </div>
+          <div class="col-md-6 content-cols">
+            <div class="content-col">
+              <h3>${speaker.name}</h3>
+              <h4>${speaker.affiliation}</h4>
+              ${speaker.presentation ? `<p>${speaker.presentation}</p>` : ""}
+            </div>
           </div>
         </div>
-        <div class="col-md-6 content-cols">
-          <div class="content-col">
-            <h3>${speaker.name}</h3>
-            <h4>${speaker.affiliation}</h4>
-            ${speaker.presentation ? `<p>${speaker.presentation}</p>` : ""}
-          </div>
-        </div>
-      </div>
-    `;
+      `;
       }
       // Get the speakers container
       const speakersContainer = document.getElementById("speakers-container");
