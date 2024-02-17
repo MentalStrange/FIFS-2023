@@ -22,6 +22,40 @@
       order: 2;
     }
   }
+  .body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 20vh;
+    }
+  .announcement {
+        background-color: #fff;
+        padding: 50px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        max-width: 80%;
+    }
+
+    h1 {
+        font-size: 24px;
+        color: #f82121;
+    }
+
+    p {
+        font-size: 18px;
+        color: #555;
+        margin-bottom: 20px;
+    }
+
+    @media (max-width: 768px) {
+        .announcement {
+            max-width: 90%;
+        }
+    }
 </style>
 <!-- Banner Section Start-->
 <section class="banner">
@@ -57,7 +91,7 @@
       <h3>Speakers</h3>
     </header>
     <div id="speakers-container" class="container"></div>
-    <script>
+    <!-- <script>
       // Define an array of speaker data
       const speakers = [
         {
@@ -384,8 +418,17 @@
         const speakerHTML = generateSpeakerHTML(speaker, index);
         speakersContainer.innerHTML += speakerHTML;
       });
-    </script>
+    </script> -->
     <!-- Repeat this sequence 20 more times with different image numbers -->
+    <div class="body">
+
+      <div class="announcement">
+        <h1>Speakers Will Be Announced Soon</h1>
+        <p>We are currently finalizing our list of speakers. Stay tuned for updates!</p>
+    </div>
+    </div>
+  
+    
   </div>
 </section>
 <!-- Speaker Section End -->
