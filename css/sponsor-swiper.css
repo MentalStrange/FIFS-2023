@@ -1,0 +1,38 @@
+.slide-container {
+  max-width: 100%;
+  width: 100%;
+  padding: 40px 0;
+  overflow: hidden;
+}
+
+.slide-content {
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.card-sponsor {
+  background: none;
+}
+
+.image-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sponsor-image {
+  max-width: 100%; /* Adjust the maximum width of the logo */
+  height: auto;
+}
+
+.sponsor-image .sponsor-img {
+  height: auto;
+  width: 100%; /* Ensure the logo takes up the full width */
+  object-fit: contain;
+  border-radius: 0;
+}
+
+.swiper-pagination {
+  margin-top: 20px;
+  text-align: center;
+}

@@ -80,7 +80,7 @@ h6 {
   padding: 30px 0;
   height: 92px;
   position: fixed;
-  left: -50px;
+  left: -10px;
   top: 0;
   right: 0;
   transition: all 0.5s;
@@ -96,8 +96,8 @@ h6 {
 
 #header #logo {
   float: left;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
 }
 
 #header #logo h1 {
@@ -1923,3 +1923,26 @@ body.mobile-nav-active #mobile-nav-toggle {
   padding-left: 20px;
   list-style-type: none;
 }
+
+/* start sponsor slider */
+.sponsor-slider-section {
+  padding: 50px 0; /* Adjust padding as needed */
+}
+
+.sponsor-slider {
+  display: flex;
+  flex-wrap: nowrap; /* Ensure all slides are in one line */
+  overflow-x: auto; /* Enable horizontal scrolling */
+}
+
+.sponsor-slide {
+  flex: 0 0 auto; /* Ensure each slide takes up the necessary space */
+  margin-right: 20px; /* Adjust margin between slides as needed */
+}
+
+.sponsor-slide img {
+  max-width: 100%; /* Make sure images don't exceed container width */
+  height: auto; /* Maintain aspect ratio */
+}
+
+/* end sponsor slider */
