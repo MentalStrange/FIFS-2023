@@ -77,7 +77,7 @@ h6 {
 /* ================================================= */
 
 #header {
-  padding: 30px 0;
+  /* padding: 10px 0; */
   height: 92px;
   position: fixed;
   left: -10px;
@@ -89,38 +89,20 @@ h6 {
 
 #header.header-scrolled {
   background: rgba(0, 0, 0, 0.9);
-  padding: 10px 0;
-  height: 72px;
+  /* padding: 10px 0; */
+  height: 80px;
   transition: all 0.5s;
 }
 
 #header #logo {
   float: left;
-  width: 30px;
-  height: 30px;
+  width: 100px;
+  height: 1000px;
 }
-
-#header #logo h1 {
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-}
-
-#header #logo h1 a {
-  font-family: "Roboto", sans-serif;
-  font-size: 45px;
-  font-weight: 300;
-  letter-spacing: -1px;
-}
-
-#header #logo h1 a:hover {
-  color: #fff;
-}
-
 #header #logo img {
   padding: 0;
   margin: 0;
-  max-height: 50px;
+  max-height: 80px;
 }
 
 /* ================================================= */
@@ -273,6 +255,9 @@ h6 {
 }
 
 @media (max-width: 767.98px) {
+  #intro h2{
+    font-size: 20px !important;
+  }
   .banner {
     padding: 120px 0 25px 0;
   }
@@ -406,6 +391,7 @@ h6 {
   font-size: 14px;
   text-transform: uppercase;
   outline: none;
+  margin-top: 12px;
 }
 
 .nav-menu li:hover > a,
@@ -1944,5 +1930,6 @@ body.mobile-nav-active #mobile-nav-toggle {
   max-width: 100%; /* Make sure images don't exceed container width */
   height: auto; /* Maintain aspect ratio */
 }
-
 /* end sponsor slider */
+
+/* start committee swipe */

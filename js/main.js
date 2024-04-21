@@ -163,12 +163,12 @@ function loadNow($) {
 	'use strict';
 
 	var swiper = new Swiper('.slide-content', {
-	  slidesPerView: 1,                    // Number of slides to show at once
-	  spaceBetween: 25,                    // Space between slides (in pixels)
-	  loop: false,                          // Enable continuous loop of slides
-	  centerSlide: false,                   // Center the active slide
-	  fade: false,                          // Enable fade transition effect
-	  grabCursor: false,                    // Show grab cursor on slide hover
+		slidesPerView: 1,                    // Number of slides to show at once
+		spaceBetween: 25,                    // Space between slides (in pixels)
+		loop: true,                          // Enable continuous loop of slides
+		centerSlide: false,                   // Center the active slide
+		fade: false,                          // Enable fade transition effect
+		grabCursor: false,                    // Show grab cursor on slide hover
 		pagination: {
 			el: '.swiper-pagination',          // Pagination element selector
 			clickable: true,                   // Allow clicking on pagination bullets
@@ -184,16 +184,20 @@ function loadNow($) {
 		},
 		breakpoints: {
 			0: {
-			slidesPerView: 1,                // Number of slides to show at screen width 0px and above
+				slidesPerView: 1,                // Number of slides to show at screen width 0px and above
 			},
 			520: {
-			slidesPerView: 2,                // Number of slides to show at screen width 520px and above
+				slidesPerView: 2,                // Number of slides to show at screen width 520px and above
 			},
 			950: {
-			slidesPerView: 3,                // Number of slides to show at screen width 950px and above
+				slidesPerView: 3,                // Number of slides to show at screen width 950px and above
 			},
 		},
 	});
 	
 
 }
+
+
+// committee swiper
+
