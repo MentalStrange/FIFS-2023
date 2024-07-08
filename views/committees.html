@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Conference Committee</title>
-	<style>
-        /* image style */
+    <title>Conference Committee</title>
+    <style>
+        /* Image style */
         .hero {
             background-image: url('img/committe.jpg');
             background-size: cover;
@@ -13,9 +13,9 @@
             justify-content: center;
             align-items: center;
             position: relative;
-            }
+        }
 
-            .hero::before {
+        .hero::before {
             content: "";
             position: absolute;
             top: 0;
@@ -23,282 +23,201 @@
             width: 100%;
             height: 100%;
             background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5));
-            }
+        }
 
-            .hero p {
+        .hero p {
             font-size: 2.5rem;
             color: #fff;
             text-shadow: 0 0 10px rgba(0,0,0,0.5);
             position: relative;
             z-index: 1;
         }
-		/* Set the background color and font family */
-		body {
-			background-color: #f8f8f8;
-			font-family: Arial, sans-serif;
-		}
 
-		/* Center the page content */
-		.footer-container {
-			margin: 0 auto;
-			background-color: #fff;
-			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-			border-radius: 10px;
-		}
+        /* Set the background color and font family */
+        body {
+            background-color: #f8f8f8;
+            font-family: Arial, sans-serif;
+        }
 
-		/* Style the section headings */
-		h2 {
-			font-size: 24px;
-			color: #0077be;
-			margin-top: 0;
-			margin-bottom: 20px;
-			padding-top: 30px;
-			text-transform: uppercase;
-			letter-spacing: 2px;
+        /* Center the page content */
+        .footer-container {
+            margin: 0 auto;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        /* Style the section headings */
+        h2 {
+            font-size: 24px;
+            color: #0077be;
+            margin-top: 0;
+            margin-bottom: 20px;
+            padding-top: 30px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
             text-align: center;
             margin-bottom: 40px;
+        }
 
-		}
+        /* Style the committee member cards */
+        .card {
+            margin-bottom: 30px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+            cursor: pointer;
+        }
 
-		/* Style the committee member cards */
-		.card {
-			margin-bottom: 30px;
-			background-color: #fff;
-			box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-			border-radius: 10px;
-			overflow: hidden;
-			display: flex;
-			flex-direction: column;
-			align-items: center;
-			padding: 20px;
-			text-align: center;
-			transition: all 0.3s ease;
-			cursor: pointer;
-		}
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
+        }
 
-		.card:hover {
-			transform: translateY(-5px);
-			box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.2);
-		}
+        .card h3 {
+            font-size: 20px;
+            color: #333;
+            margin-top: 0;
+            margin-bottom: 10px;
+        }
 
-		.card h3 {
-			font-size: 20px;
-			color: #333;
-			margin-top: 0;
-			margin-bottom: 10px;
-		}
+        .card p {
+            font-size: 16px;
+            color: #555;
+            margin-top: 0;
+            margin-bottom: 0;
+        }
 
-		.card p {
-			font-size: 16px;
-			color: #555;
-			margin-top: 0;
-			margin-bottom: 0;
-		}
+        .card .position {
+            font-size: 14px;
+            color: #999;
+            margin-top: 10px;
+            margin-bottom: 0;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
 
-		.card .position {
-			font-size: 14px;
-			color: #999;
-			margin-top: 10px;
-			margin-bottom: 0;
-			text-transform: uppercase;
-			letter-spacing: 1px;
-		}
+        /* Style the committee member images */
+        .card img {
+            width: 100px;
+            height: 100px;
+            object-fit: cover;
+            border-radius: 50%;
+            margin-bottom: 10px;
+        }
 
-		/* Style the committee member images */
-		.card img {
-			width: 100px;
-			height: 100px;
-			object-fit: cover;
-			border-radius: 50%;
-			margin-bottom: 10px;
-		}
-
-		/* Style the committee member names */
-		.card .name {
-			font-size: 18px;
-			font-weight: bold;
-			text-transform: uppercase;
-			letter-spacing: 1px;
-			color: #333;
-			margin-top: 0;
-			margin-bottom: 5px;
-		}
-	</style>
+        /* Style the committee member names */
+        .card .name {
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: #333;
+            margin-top: 0;
+            margin-bottom: 5px;
+        }
+    </style>
 </head>
+<body>
     <section class="hero">
         <div class="hero-inner">
             <p style="text-align:center">Committees In FLFS</p>
         </div>
-        </section>
-	<div class="footer-container">
-		<h2>Scientific Committee</h2>
-		<div class="card">
-			<h3 class="name">Prof. Muhammed Yasein</h3>
-			<p class="position">Scientific Committee</p>
-	</div>
-	<div class="card">
-			<h3 class="name">Prof. Ismail H. Herms</h3>
-			<p class="position">Scientific Committee</p>
-	</div>		
-	<div class="card">
-			<h3 class="name">Prof. Abdelaziz Nour</h3>
-			<p class="position">Scientific Committee</p>
-	</div>		
-	<div class="card">
-			<h3 class="name">Prof. Abdel Rahman Atta</h3>
-			<p class="position">Scientific Committee</p>
-	</div>		
-	<div class="card">
-			<h3 class="name">Prof. Reda M. Khalifa</h3>
-			<p class="position">Scientific Committee</p>
-	</div>		
-	<div class="card">
-			<h3 class="name">Prof. Hassan AbdElGhafar</h3>
-			<p class="position">Scientific Committee</p>
-	</div>
-	<div class="card">
-			<h3 class="name">Prof. Mahmoud Sharaby</h3>
-			<p class="position">Scientific Committee</p>
-	</div>
-	<div class="card">
-			<h3 class="name">Prof. Gamal Abdelattif</h3>
-			<p class="position">Scientific Committee</p>
-	</div>		
-	<div class="card">
-			<h3 class="name">Prof. Mesbah Mesbah</h3>
-			<p class="position">Scientific Committee</p>
-	</div>		
-	<div class="card">
-			<h3 class="name">Prof. Hany Sabry</h3>
-			<p class="position">Scientific Committee</p>
-	</div>		
-	<div class="card">
-			<h3 class="name">Prof. Mustafa Ayoub</h3>
-			<p class="position">Scientific Committee</p>
-	</div>
-	<div class="card">
-			<h3 class="name">Prof. Ali Moustfa</h3>
-			<p class="position">Scientific Committee</p>
-	</div>
-	<div class="card">
-			<h3 class="name">Prof. Moustfa Kobeisy</h3>
-			<p class="position">Scientific Committee</p>
-	</div>
-	<div class="card">
-			<h3 class="name">Prof. Gamal Ashour</h3>
-			<p class="position">Scientific Committee</p>
-	</div>
-	<div class="card">
-			<h3 class="name">Prof. Gamal Zaza</h3>
-			<p class="position">Scientific Committee</p>
-	</div>
-	<div class="card">
-			<h3 class="name">Prof. Khaled Tawfik</h3>
-			<p class="position">Scientific Committee</p>
-	</div>
-	<div class="card">
-			<h3 class="name">Prof. Ahmed Abdel Khalek</h3>
-			<p class="position">Scientific Committee</p>
-	</div>
-	<div class="card">
-			<h3 class="name">Prof. Ahmed Abdelghany</h3>
-			<p class="position">Scientific Committee</p>
-	</div>
-	<div class="card">
-			<h3 class="name">Prof. Ashraf Abdelrahman</h3>
-			<p class="position">Scientific Committee</p>
-	</div>
-	<div class="card">
-			<h3 class="name">Prof. Mohamed Mobark</h3>
-			<p class="position">Scientific Committee</p>
-	</div>
-	<div class="card">
-			<h3 class="name">Prof. Walid Kishk</h3>
-			<p class="position">Scientific Committee</p>
-	</div>
-	<div class="card">
-			<h3 class="name">Prof. Elsyaed Gamal</h3>
-			<p class="position">Scientific Committee</p>
-	</div>
-	<div class="card">
-			<h3 class="name">Prof. Ahmed Askar</h3>
-			<p class="position">Scientific Committee</p>
-	</div>
-	<div class="card">
-			<h3 class="name">Prof. Khaled El Bahrawy</h3>
-			<p class="position">Scientific Committee</p>
-	</div>
-	<div class="card">
-			<h3 class="name">Prof. Ahmed Helal</h3>
-			<p class="position">Scientific Committee</p>
-	</div>
-	
+    </section>
+    <div class="footer-container">
+        <h2>Scientific Committee</h2>
+        <div id="scientific-committee"></div>
         <hr>
+        <h2 style="margin-top: 50px;">Organizing Committee</h2>
+        <div id="organizing-committee"></div>
+    </div>
 
+    <script>
+        const scientificCommittee = [
+            "Prof. Muhammed Yasein",
+            "Prof. Ismail H. Herms",
+            "Prof. Abdelaziz Nour",
+            "Prof. Abdel Rahman Atta",
+            "Prof. Reda M. Khalifa",
+            "Prof. Hassan AbdElGhafar",
+            "Prof. Mahmoud Sharaby",
+            "Prof. Gamal Abdelattif",
+            "Prof. Mesbah A. Mesbah",
+            "Prof. Hany Sabry",
+            "Prof. Mustafa Ayoub",
+            "Prof. Ali Moustfa",
+            "Prof. Moustfa Kobeisy",
+            "Prof. Mohamed Fathy Osman",
+            "Prof. Abdelhamid M. S. Eid",
+            "Prof. Gamal Ashour",
+            "Prof. Gamal Zaza",
+            "Prof. Khaled Tawfik",
+            "Prof. Ahmed Abdel Khalek",
+            "Prof. Ahmed Abdelghany",
+            "Prof. Ashraf Amin",
+            "Prof. Mohamed Mobark",
+            "Prof. Walid Kishk",
+            "Prof. Elsyaed Gamal",
+            "Prof. Ahmed Askar",
+            "Prof. Khaled El Bahrawy",
+            "Prof. Ahmed Helal",
+            "Prof. Mohamed Al Danasoury",
+            "Prof. Hafez M. A. Khouraiba",
+            "Prof. Khaled Ahmed E. Ali"
+        ];
 
-		<!-- ------------------------------------------------------------- -->
-		<!-- ------------------------------------------------------------- -->
-		<!-- ---------------------scientific committee-------------------- -->
-		<!-- ------------------------------------------------------------- -->
-		<!-- ------------------------------------------------------------- -->
+        const organizingCommittee = [
+            "Prof. Kheir El-Din ElAzrak",
+            "Prof. Abou Bakr Azoz",
+            "Prof. Mohamed Elsabry",
+            "Prof. Faten Abdelaziz",
+            "Prof. Tarik Elsayed",
+            "Prof. Ahmed Hanafy",
+            "Prof. Badiaa Abdelfattah",
+            "Prof. Safaa Mahmoud",
+            "Prof. Mervat Ali",
+            "Prof. Soliman Ahmed Soliman",
+            "Dr. Fakhry Elhady",
+            "Dr. Mohamed Radwan",
+            "Dr. Amal ElFeky",
+            "Dr. Ahmed El-Moghazy",
+            "Dr. Monay Shahean",
+            "Dr. Hamada Salah",
+            "Dr. Abdullah Ghazaa",
+            "Dr. Maher Abo Samra",
+            "Dr. Saadya Abd Alkader",
+            "Dr. Amin Mohamed",
+            "Dr. Sameh Shedeed",
+            "Dr. Mohamed El-Gendy"
+        ];
 
-		<h2 style="margin-top: 50px;">Organizing Committee</h2>
-		<div class="card">
-			<h3 class="name">Prof. Kheir El-Din ElAzrak</h3>
-			<p class="position">Organizing Committee</p>
-	</div>
-	<div class="card">
-			<h3 class="name">Prof. Mohamed Elsabry</h3>
-			<p class="position">Organizing Committee</p>
-	</div>
-	<div class="card">
-			<h3 class="name">Prof. Abou Bakr Azoz</h3>
-			<p class="position">Organizing Committee</p>
-	</div>
-	<div class="card">
-			<h3 class="name">Prof. Faten Abdelaziz</h3>
-			<p class="position">Organizing Committee</p>
-	</div>
-	<div class="card">
-			<h3 class="name">Prof. Tarik Elsayed</h3>
-			<p class="position">Organizing Committee</p>
-	</div>
-	<div class="card">
-			<h3 class="name">Prof. Ahmed Hanafy</h3>
-			<p class="position">Organizing Committee</p>
-	</div>
-	<div class="card">
-			<h3 class="name">Dr. Fkhry Elhady</h3>
-			<p class="position">Organizing Committee</p>
-	</div>
-	<div class="card">
-			<h3 class="name">Dr. Mohamed Radwan</h3>
-			<p class="position">Organizing Committee</p>
-	</div>
-	<div class="card">
-			<h3 class="name">Dr. Amal El-Faky</h3>
-			<p class="position">Organizing Committee</p>
-	</div>
-	<div class="card">
-			<h3 class="name">Dr. Ahmed El-Moghazy</h3>
-			<p class="position">Organizing Committee</p>
-	</div>
-	<div class="card">
-			<h3 class="name">Dr. Monay Shahean</h3>
-			<p class="position">Organizing Committee</p>
-	</div>
-	<div class="card">
-			<h3 class="name">Dr. Hamada Mohamed</h3>
-			<p class="position">Organizing Committee</p>
-	</div>
-	<div class="card">
-			<h3 class="name">Dr. Amin Mohamed</h3>
-			<p class="position">Organizing Committee</p>
-	</div>
-	<div class="card">
-			<h3 class="name">Dr. Mohamed El-Gendy</h3>
-			<p class="position">Organizing Committee</p>
-	</div>
-	
-		  
+        function createMemberCard(name, position) {
+            return `
+                <div class="card">
+                    <h3 class="name">${name}</h3>
+                    <p class="position">${position}</p>
+                </div>
+            `;
+        }
+
+        const scientificContainer = document.getElementById('scientific-committee');
+        const organizingContainer = document.getElementById('organizing-committee');
+
+        scientificCommittee.forEach(member => {
+            scientificContainer.innerHTML += createMemberCard(member, 'Scientific Committee');
+        });
+
+        organizingCommittee.forEach(member => {
+            organizingContainer.innerHTML += createMemberCard(member, 'Organizing Committee');
+        });
+    </script>
+</body>
 </html>
